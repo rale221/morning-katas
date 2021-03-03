@@ -17,6 +17,19 @@ function twoNumberSum(array, targetSum) {
 }
 
 
+
+// const twoNumberSum = (array, targetSum) => {
+// 	let num = {}
+// 	for (let i = 0; i < array.length; i += 1) {
+// 		let arr = targetSum - array[i]
+// 		if (num[arr] !== undefined && num[arr] !== i) {
+// 			return [i, num[arr]]
+// 		} else {
+// 			num[array[i]] = i
+// 		}
+// 	}
+// }
+
 //twoNumberSum([3,5,-4,8,11,-1,6],10)
 //Expected Output : [11,-1]
 
