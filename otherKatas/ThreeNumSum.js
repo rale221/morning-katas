@@ -1,9 +1,23 @@
 //Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum and return a two-dimensional array of all these triplets. The numbers in each triplet should be ordered in ascending order, and the triplets themselves should be ordered in ascending order with respect to the numbers they hold.
 //If no three numbers sum up to the target sum, the function should return an empty array.
 
-function threeNumSum(array, targetSum) {
-    //Your code goes here
-}
+// function threeNumSum(array, targetSum) {
+//     //Your code goes here
+//     let respArr = []
+//     array.sort((a, b) => b - a);
+//     array.map((i, iindex) => {
+//         array.slice(o, iindex + 1).map(k => {
+//             if (i + j + k == targetSum) {
+//                 respArr.psuh([i, j, k])
+//             }
+//         })
+//     })
+// })
+// return (respArr)
+
+
+
+// }
 
 //threeNumSum([12,3,1,2,-6,5,-8,6],0) 
 //Expected Output :
