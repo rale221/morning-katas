@@ -3,6 +3,14 @@
 //The function should perform this in place (i.e., it should mutate the input array) and doesn't need to maintain the order of the other integers.
 
 function moveElementToEnd(array, toMove) {
+    return (array.sort((a, b) => { return a == toMove ? 0 : -1 }))
+}
+
+
+
+
+
+function moveElementToEnd(array, toMove) {
     // Write your code here.
 }
 
