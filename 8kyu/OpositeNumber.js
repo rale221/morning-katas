@@ -10,3 +10,6 @@
 function oposite(number) {
 	return -number;
 }
+
+// Solution 2
+// console.log(number<0?Math.abs(number):(-number));
