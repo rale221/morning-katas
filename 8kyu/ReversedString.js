@@ -4,10 +4,8 @@
 
 // 'world'  =>  'dlrow'
 
+//
+
 function solution(str) {
-	let reverse = '';
-	for (let i = str.lenght - 1; i >= 0; i--) {
-		reverse = reverse + str[i];
-	}
-	return reverse;
+	return str.split('').reverse().join('');
 }
