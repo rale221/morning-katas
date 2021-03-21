@@ -10,7 +10,14 @@
 
 function rentalCarCost(d) {
      // Your solution here
-     return d*40
+    let price = 0
+    if (d < 3){
+      return d*40 
+    } if else (d < 5){
+      return d*40 - 20
+    } else {
+      return d*40 - 50
+    }
    }
 
    Test.describe("Regular Tests:", function() {
