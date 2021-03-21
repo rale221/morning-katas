@@ -10,6 +10,7 @@
 
 function rentalCarCost(d) {
      // Your solution here
+     return d*40
    }
 
    Test.describe("Regular Tests:", function() {
