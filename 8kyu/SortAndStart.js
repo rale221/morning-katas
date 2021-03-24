@@ -5,8 +5,10 @@
 // The returned value must be a string, and have "***" between each of its letters.
 
 // You should not remove or add elements from/to the array.
-
+s = ['fist', 'second', 'and', 'four']
 
 function twoSort(s){
-     
+     let sortirano =  s.sort()
+     return sortirano.split('*', 1)
+
 }
