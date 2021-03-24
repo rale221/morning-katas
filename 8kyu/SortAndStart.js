@@ -8,7 +8,11 @@
 s = ['fist', 'second', 'and', 'four']
 
 function twoSort(s){
-     let sortirano =  s.sort()
-     return sortirano.split('*', 1)
+     let sortirano = s.sort()
+     return sortirano[0].split('').join('*')
 
 }
+
+// Ovde smo prvo koristili metodu sort, koja sortira po Alphabetu.
+// Zatim smo prvu rec iz Array splitovali
+// I onda pomocu join spojili i dodali ***
