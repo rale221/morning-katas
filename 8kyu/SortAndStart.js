@@ -7,3 +7,6 @@
 // You should not remove or add elements from/to the array.
 
 
+function twoSort(s){
+     
+}
