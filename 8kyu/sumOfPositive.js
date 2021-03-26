@@ -33,13 +33,17 @@ function positiveSum(arr) {
     //   return total + ((eachElement >0)? eachElement : 0)
     // },0 )
    
-    let total = 0
-    for (let i=0; i < arr.length; i++){
-        if (arr[i] > 0) {
-            total +=arr[i]
-        } 
+//     let total = 0
+//     for (let i=0; i < arr.length; i++){
+//         if (arr[i] > 0) {
+//             total +=arr[i]
+//         } 
      
         
-    }
-        return total
-}
+//     }
+//         return total
+
+        let positive = arr.filter(function(number){
+            return number >0
+        })
+ }
