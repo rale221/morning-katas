@@ -9,7 +9,15 @@
     n = 348597 
 function digitize(n) {
      let array = n.toString().split('')
-     return array.reverse()
+     let rev = array.reverse()
+     console.log(rev)
+     let final = []
+     for (i=0; i<rev.length; i++){
+       final.push(parseInt(rev[i]))
+       
+     }
+     return final
+     
      
 
    }

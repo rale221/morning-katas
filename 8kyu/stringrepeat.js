@@ -7,7 +7,7 @@
 
 
 // Option: 1
-unction repeatStr (n, s) {
+function repeatStr(n, s) {
     let str = '';
      for(i=0; i <n ; i++){
      str += s
