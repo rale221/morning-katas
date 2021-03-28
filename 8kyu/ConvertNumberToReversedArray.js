@@ -6,7 +6,10 @@
 // Example:
 
 // 348597 => [7,9,5,8,4,3]
-
+    n = 348597 
 function digitize(n) {
-     //code here
+     let array = n.toString().split('')
+     return array.reverse()
+     
+
    }
