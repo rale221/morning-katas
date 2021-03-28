@@ -7,15 +7,15 @@
 
 
 // Option: 1
-function repeatStr(n, s) {
+unction repeatStr (n, s) {
     let str = '';
-    for (let i = 0; i < n; i++) {
-        str += s
-    }
+     for(i=0; i <n ; i++){
+     str += s
+     }
     return str;
     return s.repeat(n)
-}
-
+    
+  }
 
 // Option: 2
 const repeatStr = (n, s) => s.repeat(n)
