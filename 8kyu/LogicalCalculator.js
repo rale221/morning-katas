@@ -30,19 +30,21 @@ function logicalCalc(array, op) {
 	// primam niz boolean-a to je arrayy
 	// primam operator - to je op
 	// treba da vratim rezultat koga dobijem tako sto na sve elemente niza primenim ovaj operator i rez ce biti ili true ili false
-	let res;
+	let res = array[0];
 
-	for (i = 0; i < array.length - 1; i++) {
-		if (op === '&&') {
-			res = array[i] && array[i + 1];
+	for (i = 1; i < array.length; i++) {
+		if (op === 'AND') {
+			//      res = array[i] && array[i + 1];
+			res = res && array[i];
 		}
-		if (op === '||') {
+		if (op === 'OR') {
 			console.log('elemnt', array[i] || array[i + 1]);
-			res = array[i] || array[i + 1];
+			//      res = array[i] || array[i + 1];
+			res = res || array[i];
 		}
-		if (op === '^') {
+		if (op === 'XOR') {
 			// res = !(array[i] == array[i + 1]);
-			res = res ^ array[i];
+			res = res != array[i];
 		}
 	}
 	if (typeof res === 'number') {
@@ -50,10 +52,6 @@ function logicalCalc(array, op) {
 	}
 	return res;
 }
-
-let niz = [true, false, false];
-let rez = logicalCalc(niz, '^');
-console.log('r', rez);
 
 // function logicalCalc(array, op) {
 // 	//your code here
