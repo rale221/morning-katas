@@ -9,3 +9,18 @@
 // Example
 // Input: 1,3,5,6,7,8
 // Output: 1,2,3,4,5,6,7,8
+numbers = [1,3,5,6,7,8,12]
+function pipeFix(numbers){
+     // find out first and last item in array, or maybe just the last item.
+     // first we know, its index 0....
+     let first = numbers[0]
+     let last = numbers[numbers.length -1]
+     console.log(last)
+     let pipe =[]
+     for (let i = first; i <= last; i++ ){
+          pipe.push(i)
+          
+     }
+     return pipe
+
+     }
