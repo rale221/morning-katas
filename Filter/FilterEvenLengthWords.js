@@ -6,17 +6,17 @@ const words = ['jedan', 'dva', 'tri', 'kuca', 'mama', 'tata']
 function filterEvenLengthWords(words) {
      // your code here
 
-// let parni = words.filter((e) => e.length % 2 === 0)
-// return parni
+let parni = words.filter((e) => e.length % 2 === 0)
+return parni
 
-return words.filter((e) => e.length % 2 === 0)
+// return words.filter((e) => e.length % 2 === 0)
 
    }
 
 
-   const filterEvenLengthWords2 = (words) => words.filter((e) => e.length %2 === 0)
+   // const filterEvenLengthWords2 = (words) => words.filter((e) => e.length %2 === 0)
 
-   arrow
+   // arrow
    // (param1, param2) => { 
 //         ...filterEvenLengthWords.. 
 //         puno linija koda
