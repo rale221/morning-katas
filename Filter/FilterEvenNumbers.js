@@ -15,15 +15,15 @@ function getEvenNumbers(numbersArray){
 
 
 
-   function getEvenNumbers2(numbersArray){
-     // filter out the odd numbers
+  //  function getEvenNumbers2(numbersArray){
+  //    // filter out the odd numbers
      
-   let parniNiz = numbersArray.filter((element) =>   {
-     if(element %2 === 0) {
-          return true
-     };
-     return false;
-   })
+  //  let parniNiz = numbersArray.filter((element) =>   {
+  //    if(element %2 === 0) {
+  //         return true
+  //    };
+  //    return false;
+  //  })
      
-     return parniNiz
-   }
+  //    return parniNiz
+  //  }
