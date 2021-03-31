@@ -16,21 +16,21 @@ return words.filter((e) => e.length % 2 === 0)
 
    const filterEvenLengthWords2 = (words) => words.filter((e) => e.length %2 === 0)
 
-   // arrow
-//    (param1, param2) => { 
-//         ...filterEvenLengthWords.. 
-//         puno linija koda
-//         return povratnaVrednost
-//    }
+   arrow
+   (param1, param2) => { 
+        ...filterEvenLengthWords.. 
+        puno linija koda
+        return povratnaVrednost
+   }
 
-//    (param1, oaram2) => return povratnaVrednost  ---- samo 1 linija koda  i odmah je pisemo, bez return
+   (param1, oaram2) => return povratnaVrednost  ---- samo 1 linija koda  i odmah je pisemo, bez return
 
 
 
-// (param) => { 
-//      ...puno linija koda
-//      return povratnaVrednost
-// } 
+(param) => { 
+     ...puno linija koda
+     return povratnaVrednost
+} 
 
-// isto sto i ovo:
-// param => {...filterEvenLengthWords.apply.call.}
+isto sto i ovo:
+param => {...filterEvenLengthWords.apply.call.}
