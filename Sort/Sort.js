@@ -52,6 +52,10 @@ function twoSortAcrnding(niz) {
 		izmenjeniString += prvi[i] + '***'; // izmenjeniString = izmenjeniString + prvi[i] + '***';
 	}
 	return izmenjeniString;
+
+	// second solution
+	// let finish = s[0].split('').join('***')
+	// return finish
 }
 
 // ako a-b < 0 onda je redosled a,b
