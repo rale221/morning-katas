@@ -55,13 +55,20 @@
 // 	console.log(`ISPIS ${e}`);
 // };
 
-a = 5;
-b = 20;
-function niz(a, b) {
-	let arr = [];
-	for (let i = a; i < b; i++) {
-		console.log('element je', i);
-		arr.push(i);
-	}
-	return arr;
+// a = 5;
+// b = 20;
+// function niz(a, b) {
+// 	let arr = [];
+// 	for (let i = a; i < b; i++) {
+// 		console.log('element je', i);
+// 		arr.push(i);
+// 	}
+// 	return arr;
+// }
+
+console.log('Hello World');
+
+for (i = 0; i < 10; i++) {
+	console.log('Im im learing BACKENDX5');
 }
+console.log('Kristina');
