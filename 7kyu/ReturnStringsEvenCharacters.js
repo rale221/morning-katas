@@ -11,15 +11,28 @@
 
 string = 'abcdefghijklm';
 
+// Solution 1
+
 function evenChars(string) {
-	let s = string.split('');
-	if (s.length < 2 || s.length > 100) {
-		return 'invalid string';
-	} else {
-		s.split('')
-			.filter(function (item, pos, self) {
-				return self.indexOf(item) == pos;
-			})
-			.join('');
+	return string.length < 2 || string.length > 100
+		? 'invalid string'
+		: [...string].filter((x, i) => i % 2);
+}
+
+// Solution 2
+
+const evenChars = (string) =>
+	string.length < 2 || string.length > 100
+		? `invalid string`
+		: [...string].filter((_, idx) => idx % 2);
+
+// Solution 3
+
+function evenChars(s) {
+	if (s.length < 2 || s.length > 100) return 'invalid string';
+	var output = [];
+	for (var i = 1; i < s.length; i += 2) {
+		output.push(s[i]);
 	}
+	return output;
 }
