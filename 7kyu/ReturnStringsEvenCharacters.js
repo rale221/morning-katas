@@ -9,19 +9,17 @@
 // "abcdefghijklm" --> ["b", "d", "f", "h", "j", "l"]
 // "a"             --> "invalid string"
 
-string = ['abcdefghijklm'];
+string = 'abcdefghijklm';
 
 function evenChars(string) {
-	// if (string.length < 2 || string.length > 100) {
-	// 	return 'invalid string';
-	// } else {
-	let s = string.split(' ');
-	return s;
-	// return string
-	// 	.split('')
-	// 	.filter(function (item, pos, self) {
-	// 		return self.indexOf(item) == pos;
-	// 	})
-	// 	.join('');
-	// // }
+	let s = string.split('');
+	if (s.length < 2 || s.length > 100) {
+		return 'invalid string';
+	} else {
+		s.split('')
+			.filter(function (item, pos, self) {
+				return self.indexOf(item) == pos;
+			})
+			.join('');
+	}
 }
