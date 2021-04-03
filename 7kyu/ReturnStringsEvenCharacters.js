@@ -13,7 +13,7 @@ string = 'abcdefghijklm';
 
 // Solution 1
 
-function evenChars(string) {
+function evenChars1(string) {
 	return string.length < 2 || string.length > 100
 		? 'invalid string'
 		: [...string].filter((x, i) => i % 2);
@@ -21,14 +21,14 @@ function evenChars(string) {
 
 // Solution 2
 
-const evenChars = (string) =>
+const evenChars2 = (string) =>
 	string.length < 2 || string.length > 100
 		? `invalid string`
 		: [...string].filter((_, idx) => idx % 2);
 
 // Solution 3
 
-function evenChars(s) {
+function evenChars3(s) {
 	if (s.length < 2 || s.length > 100) return 'invalid string';
 	var output = [];
 	for (var i = 1; i < s.length; i += 2) {
@@ -39,7 +39,7 @@ function evenChars(s) {
 
 // Solution 4
 
-function evenChars(string) {
+function evenChars4(string) {
 	if ((string.length < 2) | (string.length > 100)) {
 		return 'invalid string';
 	}
