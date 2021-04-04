@@ -14,6 +14,7 @@
 
 dna = 'ATTGC'
 
+SOLUTION 1
 function DNAStrand(dna){
      let arr = dna.split('')
      console.log(arr)
@@ -33,3 +34,14 @@ function DNAStrand(dna){
      return newarr.join('')
    }
    
+
+   // SOLUTION 2
+
+   function DNAStrand2(dna){
+        let symbols = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+        let arr =[]
+        for (i=0; i<dna.length; i++){
+             arr[i]= symbols[dna[i]]
+        }
+        return arr.join('')
+   }
