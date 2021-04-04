@@ -12,3 +12,24 @@
 // DNAStrand ("ATTGC") // return "TAACG"
 // DNAStrand ("GTAT") // return "CATA" 
 
+dna = 'ATTGC'
+
+function DNAStrand(dna){
+     let arr = dna.split('')
+     console.log(arr)
+     let newarr = []
+     for(i=0; i<arr.length; i++){
+       if(arr[i] == 'A'){
+         newarr.push('T')
+       } else if (arr[i] == 'T'){
+         newarr.push('A')
+       } else if (arr[i] == 'C'){
+         newarr.push('G')
+       } else if (arr[i] == 'G'){
+         newarr.push('C')
+       }
+     }
+     console.log(newarr)
+     return newarr.join('')
+   }
+   
