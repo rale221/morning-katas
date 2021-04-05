@@ -15,3 +15,15 @@
 // Output string must be two numbers separated by a single space, 
 // and highest number is first.
 
+numbers = ('1 2 3 4 5 -3')
+
+
+function highAndLow(numbers){
+
+     // return numbers.split(/\s/).join('');
+
+     return numbers.replace(" ", "");
+}
+
+
+//REPLACE() METHOD - MENJA SAMO PRVI ELEMENT U STRINGU.
