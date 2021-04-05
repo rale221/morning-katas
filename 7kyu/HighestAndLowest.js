@@ -21,9 +21,15 @@ numbers = ('1 2 3 4 5 -3')
 function highAndLow(numbers){
 
      // return numbers.split(/\s/).join('');
-
-     return numbers.replace(" ", "");
+     numbers = numbers.split(' ')
+     let arr = numbers.sort((a, b)=> b- a)
+     let largest = Math.max(...numbers)
+     let smallest = Math.min(...numbers)
+     return largest + ' ' + smallest
 }
 
 
 //REPLACE() METHOD - MENJA SAMO PRVI ELEMENT U STRINGU.
+
+//TRIM() METHOD - TRIMUJE WHITE SPACE SA POCETKA I KRAJA STRINGA
+//MOZE DA BUDE SAMO SA POCETKA ILI SAMO SA KRAJA TRIMSTART ODNOSNO TRIMEND.
