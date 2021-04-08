@@ -11,3 +11,15 @@
 // // "What was the name of your first pet?"
 // maskify("Skippy")                                   == "##ippy"
 // maskify("Nananananananananananananananana Batman!") == "####################################man!"
+
+
+cc = '123457326321832187'
+
+function maskify(cc){
+let arr = cc.split('')
+for (i = 0; i< arr.length - 4; i++){
+     arr[i] = '#'
+}
+return arr.join('')
+
+}
