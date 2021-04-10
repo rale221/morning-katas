@@ -19,16 +19,20 @@
 // The second value in the first integer array is 0, 
 // since the bus is empty in the first bus stop.
 
-busStops = [[10,0],[3,5],[5,8]]
+// busStops = [[10,0],[3,5],[5,8]]
 busStops = [[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
 
-var number = function(busStops){
+ function number(busStops){
 
 // Number in the array is how many ppl walked in the buss FIRST NUMBER
 // SECOND NUMBER how many ppl get out from the bus
 // EACH TWO NUMBERS are one bus stop
 // RETURN how many ppl are still in the bus after last stop
-
+let sum =0
+for (i =0; i < busStops.length; i++){
+     sum += busStops[i].reduce((a, b) => a - b)
+}
+return sum
 
      
    }
