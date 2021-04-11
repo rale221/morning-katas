@@ -8,6 +8,21 @@
 
 str = 'This website is for losers LOL!'
 
+// VOWELS in english are A , E, I, O, U and Somethime Y... but in this case no Y
+
 function disemvowel(str){
+     let vowels = ['a', 'A', 'e', 'E', 'i' , 'I', 'o', 'O', 'u', 'U']
+     let arr = str.split('')
+     let string = arr.filter((e) => {
+          if (vowels.includes(e) !== true){
+               return arr.slice(e)
+          
+          }
+          
+
+     })
+     
+     
+     return string.join('')
 
 }
