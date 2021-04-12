@@ -3,3 +3,23 @@
 // Simple, given a string of words, return the length of the shortest word(s).
 // String will never be empty and you do not need to account for different data types.
 
+s ='bitcoin take over the world maybe who knows perhaps'
+// FIND shortest word in the string
+// RETURN length of the shortest word
+
+
+function findShort(s){
+
+     // SORT Metoda
+     // Kod ove metode, uz pomoc sort-a mozemo da napravimo niz, 
+     // koji ce da poredja reci od njamanje ka najvecoj i obnuto
+     // i kada znamo niz, onda uz pomoc indexa mozemo da nadjemo i najmanju rec
+     let string = s.split(' ')
+     let word = string.sort((a, b)=> a.length - b.length)
+     return word[0].length
+     
+     
+     
+     
+
+}
