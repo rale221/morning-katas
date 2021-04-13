@@ -11,12 +11,20 @@
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
-str = 'Ooasadsd'
+str = 'Oo'
 function XO(str){
-     let string = str.toLowerCase()
-      let x = string.split('').filter(x => x === 'x')
+
+      let x = str.split('').filter((e)=>{
+          if (e === 'x' || e === 'X'){
+               return e
+          }
+     })
      console.log(x)
-     let o = string.split('').filter(o => o === 'o')
+     let o = str.split('').filter((e)=>{
+          if (e === 'o' || e === 'O'){
+               return e
+          }
+     })
      console.log(o)
      if ( x.length === o.length){
           return true
@@ -25,3 +33,20 @@ function XO(str){
           return false
      }
 }
+
+
+// SOLUGTION 2
+
+// function XO(str){
+//      let string = str.toLowerCase()
+//       let x = string.split('').filter(x => x === 'x')
+//      console.log(x)
+//      let o = string.split('').filter(o => o === 'o')
+//      console.log(o)
+//      if ( x.length === o.length){
+//           return true
+//      }
+//      else {
+//           return false
+//      }
+// }
