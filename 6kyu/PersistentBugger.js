@@ -13,17 +13,21 @@
 
 //persistence(4) === 0 // because 4 is already a one-digit number
 
-num = 39;
+num = 339;
 
 function persistence(num) {
 	arr = num
 		.toString()
 		.split('')
-		.map((n) => Number(n));
+		// .map((n) => Number(n));
 
 	let count = 0;
+	let result;
 	while (arr.length > 1) {
-		let result = arr.reduce((sum, currentValue) => sum * currentValue);
+		 result = arr.reduce((sum, currentValue) => sum * currentValue);
+		count++;
+		arr = result.toString().split('');
 	}
-	return result;
+	return count
+
 }
