@@ -15,19 +15,30 @@
 
 num = 339;
 
-function persistence(num) {
-	arr = num
-		.toString()
-		.split('')
-		// .map((n) => Number(n));
+// function persistence(num) {
+// 	arr = num
+// 		.toString()
+// 		.split('')
+// 		// .map((n) => Number(n));
 
-	let count = 0;
-	let result;
-	while (arr.length > 1) {
-		 result = arr.reduce((sum, currentValue) => sum * currentValue);
-		count++;
-		arr = result.toString().split('');
+// 	let count = 0;
+// 	let result;
+// 	while (arr.length > 1) {
+// 		 result = arr.reduce((sum, currentValue) => sum * currentValue);
+// 		count++;
+// 		arr = result.toString().split('');
+// 	}
+// 	return count
+
+// }
+
+
+function persistance(num){
+	let count = 2
+	arr = num.toString().split('')
+	while ( arr.length >1){
+		count ++
+		arr = arr.map(Number).reduce((a, b) => a * b ).toString()
 	}
 	return count
-
 }
