@@ -25,12 +25,14 @@ function findShort(s){
      // Kod ove metode, uz pomoc map-a smo prosli kroz array
      // dobili smo duzinu svake reci, i zatim uz pomoc
      // Math min ili max dobili najduzu ili u nasem slucaju najkracu rec
-     let string = s.split(' ')
-     let lenghtOfEachWord = string.map(item => item.length)
-     let word = Math.min(...lenghtOfEachWord)
-     return word
      
-
+     // let string = s.split(' ')
+     // let lenghtOfEachWord = string.map(item => item.length)
+     // let word = Math.min(...lenghtOfEachWord)
+     // return word
+     
+     https://dev.to/estheragbaje/three-ways-to-find-the-longest-word-in-a-string-using-javascript-5236
+     Odradi danas i 4 loop metodu
 
      
      
