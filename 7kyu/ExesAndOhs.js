@@ -11,3 +11,17 @@
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
+str = 'Ooasadsd'
+function XO(str){
+     let string = str.toLowerCase()
+      let x = string.split('').filter(x => x === 'x')
+     console.log(x)
+     let o = string.split('').filter(o => o === 'o')
+     console.log(o)
+     if ( x.length === o.length){
+          return true
+     }
+     else {
+          return false
+     }
+}
