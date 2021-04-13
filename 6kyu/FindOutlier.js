@@ -13,4 +13,41 @@
 // [160, 3, 1719, 19, 11, 13, -21]
 // Should return: 160 (the only even number)
 
+integers = [2, 4, 0, 100, 4, 11, 2602, 36]
+// integers = [160, 3, 1719, 19, 11, 13, -21]
 
+function findOutlier(integers){
+
+      let even =[]
+      let odd = []
+
+      for (i = 0; i< integers.length; i++){
+           if (integers[i] % 2 === 0){
+                even.push(integers[i])
+           }
+           else {
+                odd.push(integers[i])
+           }
+          }
+          if (odd.length< even.length){
+               return parseInt(odd.join())
+          }
+          else {
+               return parseInt(even.join())
+          }
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+ }
