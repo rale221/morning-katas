@@ -6,5 +6,16 @@
 // Example:
 // createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
 
+numbers = [1,2,3,4,5,6,7,8,9,0]
 
+function createPhoneNumber(numbers){
+
+     let area = numbers.splice(0, 3).join('')
+     let middle = numbers.splice(0, 3).join('')
+     let end = numbers.splice(0,4).join('')
+     return '(' + area + ')' + ' ' + middle + '-' + end
+     
+
+
+}
 
