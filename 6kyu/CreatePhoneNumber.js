@@ -14,8 +14,16 @@ function createPhoneNumber(numbers){
      let middle = numbers.splice(0, 3).join('')
      let end = numbers.splice(0,4).join('')
      return '(' + area + ')' + ' ' + middle + '-' + end
-     
-
-
 }
 
+// SOLUTION 2 SUBSTRING METHOD
+// The substring() method extracts the characters from a string, 
+// between two specified indices, and returns the new sub string.
+
+function createPhoneNumber(numbers){
+     numbers = numbers.join('');
+     return '(' + numbers.substring(0, 3) + ') ' 
+         + numbers.substring(3, 6) 
+         + '-' 
+         + numbers.substring(6);
+   }
