@@ -27,3 +27,18 @@ function createPhoneNumber(numbers){
          + '-' 
          + numbers.substring(6);
    }
+
+   // SOLUTION 3 REPLACE
+   // The replace() method searches a string for a specified value, or a regular expression, 
+   // and returns a new string where the specified values are replaced.
+
+   function createPhoneNumber(numbers){
+     var format = "(xxx) xxx-xxxx";
+     
+     for(var i = 0; i < numbers.length; i++)
+     {
+       format = format.replace('x', numbers[i]);
+     }
+     
+     return format;
+   }
