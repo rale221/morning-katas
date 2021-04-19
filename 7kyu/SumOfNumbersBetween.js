@@ -15,18 +15,21 @@
 // GetSum(-1, 0) == -1 // -1 + 0 = -1
 // GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
 
-a = 3
+a = 2
 b = 7
 
 function GetSum( a,b ){
-     let sum = 0
-   if (a == b) {
-        return a
-     }
-   else if (a < b){
-     return a + sum(a+1, b)
-   } 
-   else {
-        return a + sum(a-1,b)
-   }
+     
+ if (a>b) {
+   return ((a -b) + 1)*(b+a) / 2
+ } else if (a<b) {
+  return ((b -a) + 1)*(a+b) / 2
+ }
+ else {
+   return a
+ }
+  
+  
+  
+   
 }
