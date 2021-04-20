@@ -12,17 +12,17 @@
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11 
 
-n = 34234
+number = 34234
 
-function digitalRoot(n){
-     arr = n.toString().split('').parseInt()
-     return arr
-
-     // for (i = 0; i<=arr.length; i++){
-     //      sum = sum + arr[i]
-     // }
-     // return sum
-     
-     
-
-}
+function digitalRoot(number) {
+     let sum = number
+     let arr = []
+     let reducer = (a,b) => parseInt(a) + parseInt(b)
+  
+     while (sum > 9) {
+        arr = sum.toString().split('')
+        sum = arr.reduce(reducer)
+     }
+  
+     return sum
+  }
