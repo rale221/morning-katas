@@ -14,15 +14,21 @@
 
 number = 34234
 
-function digitalRoot(number) {
-     let sum = number
-     let arr = []
-     let reducer = (a,b) => parseInt(a) + parseInt(b)
+// function digitalRoot(number) {
+//      let sum = number
+//      let arr = []
+//      let reducer = (a,b) => parseInt(a) + parseInt(b)
   
-     while (sum > 9) {
-        arr = sum.toString().split('')
-        sum = arr.reduce(reducer)
-     }
+//      while (sum > 9) {
+//         arr = sum.toString().split('')
+//         sum = arr.reduce(reducer)
+//      }
   
-     return sum
+//      return sum
+//   }
+
+  // SOLUTION 2
+
+  function digitalRoot(number){
+       return (number - 1) % 9 + 1
   }
