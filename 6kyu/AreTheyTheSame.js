@@ -29,17 +29,14 @@ b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
 function compare(a, b){
      let arr1 = a.map((e) => e*e)
 
-     let sort1 = arr1.sort()
-     let sort2 = b.sort()
-     console.log(sort1)
-     console.log(sort2)
+     let sort1 = arr1.sort().toString()
+     let sort2 = b.sort().toString()
 
-     if ( sort1 === sort2){
+     if (sort1 == sort2) {
           return true
      }
      else {
           return false
      }
-     
 
 }
