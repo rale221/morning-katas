@@ -7,6 +7,10 @@
 // Note: The function accepts an integer and returns an integer
 num = 9119
 function squareDigits(num){
-
+arr = num.toString().split('')
+let s = arr.map((e) => e*e).join('')
+// let result = s.join()
+console.log(s)
+return Number(s)
 
 }
