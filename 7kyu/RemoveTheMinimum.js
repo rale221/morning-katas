@@ -14,7 +14,13 @@
 
 numbers = [1,2,3,4,5]
 
+// SOLUTION 1
+
 function removeSmallest(numbers) {
      let indexOfMin = numbers.indexOf(Math.min(...numbers));
      return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
    }
+
+   // SOLUTION 2 
+
+let removeSmallest = numbers => numbers.filter((n,i) => i !== numbers.indexOf(Math.min(...numbers)));
