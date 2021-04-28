@@ -16,12 +16,19 @@
 
 //SOLUTION 1
 
-function printerError(s) {
-     let count = 0;
-     for(var i = 0; i < s.length; i++) {
-       if (s[i] > "m") {
-         count++;
-       }
-     }
-     return count+"/"+s.length;
- }
+// function printerError(s) {
+//      let count = 0;
+//      for(var i = 0; i < s.length; i++) {
+//        if (s[i] > "m") {
+//          count++;
+//        }
+//      }
+//      return count+"/"+s.length;
+//  }
+
+
+ //SOLUTION 2
+
+ function printerError(s) {
+     return `${s.replace(/[a-m]/ig, '').length}/${s.length}`;
+   }
