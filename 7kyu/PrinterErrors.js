@@ -8,8 +8,18 @@
 
 // Examples:
 
-// s="aaabbbbhaijjjm"
+ s="aaabbbbhaijjjm"
 // error_printer(s) => "0/14"
 
 // s="aaaxbbbbyyhwawiwjjjwwm"
 // error_printer(s) => "8/22"
+
+function printerError(s) {
+     let count = 0;
+     for(var i = 0; i < s.length; i++) {
+       if (s[i] > "m") {
+         count++;
+       }
+     }
+     return count+"/"+s.length;
+ }
