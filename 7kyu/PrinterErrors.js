@@ -29,6 +29,13 @@
 
  //SOLUTION 2
 
- function printerError(s) {
-     return `${s.replace(/[a-m]/ig, '').length}/${s.length}`;
-   }
+//  function printerError(s) {
+//      return `${s.replace(/[a-m]/ig, '').length}/${s.length}`;
+//    }
+
+// SOLUTION 3
+// Best Solution
+
+function printerError(s) {
+     return s.match(/[^a-m]/g).length + "/" + s.length;
+ }
