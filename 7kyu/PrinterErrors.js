@@ -14,6 +14,8 @@
 // s="aaaxbbbbyyhwawiwjjjwwm"
 // error_printer(s) => "8/22"
 
+//SOLUTION 1
+
 function printerError(s) {
      let count = 0;
      for(var i = 0; i < s.length; i++) {
