@@ -17,3 +17,16 @@ function findNeedle(haystack) {
    // SOLUTION 2
 
 //   let findNeedle = haystack => `found the needle at position ${haystack.indexOf('needle')}`;
+
+
+// SOLUTION 3 while
+
+function findNeedle(haystack) {
+     var i = 0;
+     while (i < haystack.length) {
+       if (haystack[i] == 'needle') {
+         return 'found the needle at position ' + i;
+       }
+       i++;  
+     }
+   }
