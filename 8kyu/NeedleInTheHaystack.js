@@ -13,3 +13,7 @@ haystack = ['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']
 function findNeedle(haystack) {
      return "found the needle at position " + haystack.indexOf("needle");
    }
+
+   // SOLUTION 2
+
+//   let findNeedle = haystack => `found the needle at position ${haystack.indexOf('needle')}`;
