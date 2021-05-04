@@ -7,7 +7,18 @@
 
 // Example:
 
-// a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
-// a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
 // mxdiflg(a1, a2) --> 13
 
+
+
+
+function mxdiflg(a1, a2){
+ 
+     a = a1.join('')
+     b = a2.join('')
+
+return a.length - b.length
+
+}
