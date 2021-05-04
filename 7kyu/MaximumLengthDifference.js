@@ -15,10 +15,16 @@ a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
 
 
 function mxdiflg(a1, a2){
- 
-     a = a1.join('')
-     b = a2.join('')
 
-return a.length - b.length
+     if (a1.length === 0 || a2.length === 0){
+          return -1
+     }
+ 
+     arr = a1.concat(a2)
+     res = arr.sort((a, b) => b.length - a.length)
+     let first = res[0]
+     let last = res[res.length-1]
+
+     return first.length - last.length
 
 }
