@@ -23,3 +23,11 @@ function addBinary(a,b) {
      }
      return res;
    }
+
+
+   // SOLUTION 3
+
+   function addBinary(a,b){
+     return Number(a + b).toString(2);
+   }
+   
