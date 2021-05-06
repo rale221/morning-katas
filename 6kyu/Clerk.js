@@ -18,7 +18,7 @@ people = [25,25,50]
 
 //SOLUTION 1
 
-function ticket(people){
+function ticket(peopleInLine){
      var bills = [0, 0, 0]
      for (var i = 0; i < peopleInLine.length; i++) {
        switch (peopleInLine[i]) {
@@ -44,5 +44,33 @@ function ticket(people){
      
      return 'YES'
      
+
+}
+
+
+// SOLUTION 2
+
+function ticket(peopleInLine){
+     var twentyfive = 0;
+     var fifty = 0;
+     for (var i=0; i<peopleInLine.length; i++) {
+       if (peopleInLine[i] === 25)
+         twentyfive++;
+       else if (peopleInLine[i] ===50) {
+         twentyfive--;
+         fifty++;
+         }
+       else {
+         if (fifty > 0) {
+           fifty--;
+           twentyfive--;
+         }
+         else
+           twentyfive -= 3;
+       }
+       if (twentyfive < 0)
+         return "NO";
+     }
+         return "YES";
 
 }
