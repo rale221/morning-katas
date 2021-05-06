@@ -12,3 +12,37 @@
 // tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 100 dollars
 // tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)
 
+
+// people = [25,25,50,50,100]
+people = [25,25,50]
+
+//SOLUTION 1
+
+function ticket(people){
+     var bills = [0, 0, 0]
+     for (var i = 0; i < peopleInLine.length; i++) {
+       switch (peopleInLine[i]) {
+         case 25:
+           bills[0]++
+           break
+           
+         case 50:
+           bills[0]--
+           bills[1]++
+           break
+           
+         case 100:
+           bills[1] ? bills[1]-- : bills[0] -= 2
+           bills[0]--
+           break
+       }
+       
+       if (bills[0] < 0) {
+         return 'NO'
+       }
+     }
+     
+     return 'YES'
+     
+
+}
