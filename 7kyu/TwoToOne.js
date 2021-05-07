@@ -12,10 +12,20 @@ s2 = 'xxxxyyyyabklmopq';
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
+// SOLUTION 1
+
 function longest(s1, s2) {
 	let str = s1.concat(s2);
 	let arr = str.split('');
 	let uniq = arr.filter((e, i) => arr.indexOf(e) == i);
 	let res = uniq.sort();
 	return res.join('');
+}
+
+// SOLUTION 2
+
+function longest(s1, s2) {
+	return Array.from(new Set(s1 + s2))
+		.sort()
+		.join('');
 }
