@@ -18,7 +18,17 @@
 
 enteredCode = '123';
 correctCode = '123';
-currentDate = 'July 9, 2015';
+currentDate = 'July 1, 2015';
 expirationDate = 'July 2, 2015';
 
-function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {}
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+	let current = new Date(currentDate);
+	let expiration = new Date(expirationDate);
+	if (enteredCode !== correctCode) {
+		return false;
+	} else if (current > expiration) {
+		return false;
+	} else {
+		return true;
+	}
+}
