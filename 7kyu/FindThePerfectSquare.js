@@ -16,3 +16,14 @@
 function findNextSquare(sq) {
      return Math.sqrt(sq)%1? -1 : Math.pow(Math.sqrt(sq)+1,2);
    }
+
+
+   // SOLUTION 2
+
+   function findNextSquare(sq) {
+     let number = Math.sqrt(sq);
+     if(Math.round(number) === number) {
+       return Math.pow(++number, 2)
+     }
+     return -1;
+   }
