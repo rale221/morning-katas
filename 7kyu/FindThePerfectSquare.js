@@ -27,3 +27,15 @@ function findNextSquare(sq) {
      }
      return -1;
    }
+
+   // SOLUTION 3
+
+   function findNextSquare(sq) {
+     // Return the next square if sq if a perfect square, -1 otherwise
+     let root = Math.sqrt(sq);
+     if (Number.isInteger(root)) {
+       return Math.pow(root + 1, 2);
+     } else {
+       return -1;
+     }
+   }
