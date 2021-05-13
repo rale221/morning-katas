@@ -21,3 +21,13 @@ String.prototype.toJadenCase = function () {
 String.prototype.toJadenCase = function() {
      return this.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
    };
+
+
+
+// SOLUTION 3
+
+String.prototype.toJadenCase = function () {
+     return this.split(' ')
+       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+       .join(' ');
+   };
