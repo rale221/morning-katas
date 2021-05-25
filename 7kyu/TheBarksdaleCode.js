@@ -27,3 +27,9 @@ function decode(string) {
        return value==5 ? 0 : value==0 ? 5 : 10 - value;
      }).join("");
    }
+
+   // Solution 2
+
+   function decode(string) {
+     return string.split("").map(num => num != 5 && num != 0 ? 10 - num : 5 - num).join("")
+   }
