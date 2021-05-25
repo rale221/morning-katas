@@ -18,6 +18,12 @@
 
 // Write a funciton called decode(). Given an encoded string, return the actual phone number in string form. Don't worry about input validation, parenthesies, or hyphens.
 
-function decode(string){
-     
-}
+string = '4103432323'
+
+// Solution 1
+
+function decode(string) {
+     return string.split("").map(function(value) {
+       return value==5 ? 0 : value==0 ? 5 : 10 - value;
+     }).join("");
+   }
