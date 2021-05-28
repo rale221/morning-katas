@@ -18,6 +18,9 @@
 
 games = ['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']
 
+//Solution 1
+
+
 function points(games) {
      let total = 0;
      games.map(game => {
@@ -28,4 +31,19 @@ function points(games) {
        }
      });
      return total;
+   }
+
+
+   // Solution 2 
+
+   function points(games) {
+     var sum=0;
+     for (var i=0; i<games.length; ++i)
+     {
+       if (games[i][0]>games[i][2])
+         sum+=3;
+       if (games[i][0]==games[i][2])
+         sum+=1;
+     }
+     return sum;
    }
