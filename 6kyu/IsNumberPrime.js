@@ -15,6 +15,9 @@
 // is_prime(2)  /* true  */
 // is_prime(-1) /* false */
 num = 37
+
+// Solution 1
+
 function isPrime(num) {
      for(let i = 2; i <= Math.sqrt(num); i++) {
        if(num % i === 0) {
@@ -22,4 +25,20 @@ function isPrime(num) {
        }
      }
      return num > 1
+   }
+
+
+   // Solution 2
+
+   function isPrime(n) {
+     if (n <= 1)
+       return false;
+     if (n <= 3 || n == 5 || n == 7 || n == 11)
+       return true;
+     if (n % 2 === 0 || n % 3 === 0)
+       return false;
+     for (var i = 5; i <= Math.pow(n, 0.5); i += 6)
+       if (n % i === 0 || n % (i + 2) === 0)
+         return false;
+     return true;
    }
