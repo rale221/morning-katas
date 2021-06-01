@@ -14,3 +14,12 @@
 // is_prime(1)  /* false */
 // is_prime(2)  /* true  */
 // is_prime(-1) /* false */
+num = 56
+function isPrime(num){
+     if (num < 1 && num % 2 === 0 && num % 5 === 0){
+          return num + ' is not prime'
+     }  else {
+          return num + ' is prime'
+     }
+
+}
