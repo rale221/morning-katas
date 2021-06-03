@@ -14,7 +14,14 @@
 // rgb(0,0,0) // returns 000000
 // rgb(148, 0, 211) // returns 9400D3
 
-function rgb(r, g, b){
+//Solution 1
 
-     
-}
+function rgb(r, g, b){
+     return toHex(r)+toHex(g)+toHex(b);
+   }
+   
+   function toHex(d) {
+       if(d < 0 ) {return "00";}
+       if(d > 255 ) {return "FF";}
+       return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
+   }
