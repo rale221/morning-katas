@@ -25,3 +25,11 @@ function rgb(r, g, b){
        if(d > 255 ) {return "FF";}
        return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
    }
+
+   // Solution 2
+
+   function rgb(r, g, b){
+     return [r,g,b].map(function(x) {
+       return ('0'+Math.max(0, Math.min(255, x)).toString(16)).slice(-2);
+     }).join('').toUpperCase();
+   }
