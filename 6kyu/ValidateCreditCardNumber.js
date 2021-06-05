@@ -27,19 +27,24 @@
 
 // 18 (modulus) 10 ==> 8 , which is not equal to 0, so this is not a valid credit card number
 
-n = 123
+n = 891
+// Solution 1
 
 function validate(n){
      let str = n.toString().split('')
      if (str.length > 16){
           return false
      }
-     let reverse = str.reverse().map((e) => parseInt(e))
 
+     let reverse = str.reverse().map((e) => parseInt(e))
      for (i=1; i<reverse.length; i+=2){
           reverse[i] *=2
+          if (reverse[i] > 9){
+               reverse[i] -= reverse[i] / 2
+          }
      }
      console.log(reverse)
+
      let sum = reverse.reduce((a, b) => a + b)
      if (sum % 10 == 0){
           return true
