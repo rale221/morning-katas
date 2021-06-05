@@ -17,7 +17,7 @@
 // So there are 11 digits 1 for the squares of numbers between 0 and 25.
 // Note that 121 has twice the digit 1.
 
-n = 11
+n = 10
 d = 1
 
 function nbDig(n, d){
@@ -27,7 +27,9 @@ for (i=0; i<=n; i++){
      // square.push(Math.pow(i, 2)) prvi element je broj a drugi je koliko put hocemo da ih pomnozimo
      square.push(i*i)
 }
-res = square.filter((a, d) => a.indexOf(d))
-return res
+let str = square.join('').split('')
+let arrayNumber= str.map((e) => parseInt(e))
+console.log(arrayNumber)
+return arrayNumber.map((e) => e ===d).filter(Boolean).length
 
-}
+} 
