@@ -19,6 +19,8 @@
 
 n = 10
 d = 1
+//SOLUTION 1
+
 
 function nbDig(n, d){
 
@@ -33,3 +35,13 @@ console.log(arrayNumber)
 return arrayNumber.map((e) => e ===d).filter(Boolean).length
 
 } 
+
+// SOLUTION 2
+
+function nbDig(n, d) {
+     var res=0;
+         for (var g=0;g<=n;g++){
+           var square=(g*g+"").split("");
+           square.forEach((s)=>s==d?res++:null)
+         }return res;
+     }
