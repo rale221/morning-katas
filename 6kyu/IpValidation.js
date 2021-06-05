@@ -13,9 +13,10 @@
 // Invalid inputs:
 
 // 1.2.3
+str = '12.255.56.1'
 //str ='12.34.56'
 // 123.456.78.90
-str ='0.03.0.0'
+// str ='\n1.2.3.4'
 // Note that leading zeros (e.g. 01.02.03.04) are considered invalid.
 
 function isValidIP(str){
@@ -29,15 +30,23 @@ function isValidIP(str){
      if (lengthCheck.length !== 4){
           return false
      }
+
      let numberCheck = lengthCheck.map((e) => parseInt(e) >= 0 && parseInt(e) < 256).filter(Boolean).length
+     console.log(numberCheck)
      if (numberCheck !== 4){
           return false
      }
-     let zeroCheck = str.split('.').map((e) => e.length > 1 && e.startsWith(0)).filter(Boolean).length
+
+     let zeroCheck = str.split('.').map((e) => e.length > 1 && e.startsWith(0) || e.startsWith(' ') || e.endsWith(' ')).filter(Boolean).length
      console.log(zeroCheck)
      if (zeroCheck !==0){
           return false
-     }else {
+     }
+     
+     let numberCheckTwo = lengthCheck.map((e) => isNaN(parseInt(e))).filter(Boolean).length
+     if (numberCheckTwo !==0){
+          return false
+     } else{
           return true
      }
 }
