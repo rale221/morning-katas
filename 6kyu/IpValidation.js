@@ -19,6 +19,7 @@ str = '12.255.56.1'
 // str ='\n1.2.3.4'
 // Note that leading zeros (e.g. 01.02.03.04) are considered invalid.
 
+// Solution 1
 function isValidIP(str){
      let arr = str.split('')
      let dotCheck = arr.map((e) => e === '.').filter(Boolean).length
@@ -50,3 +51,9 @@ function isValidIP(str){
           return true
      }
 }
+
+// Solution 2
+
+function isValidIP(str) {
+     return str.split('.').filter(function(v){return v==Number(v).toString() && Number(v)<256}).length==4;
+   }
