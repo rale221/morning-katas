@@ -1,0 +1,56 @@
+You will be creating and styling a user card. A user card consists of a profile picture, full name, edit button and status.
+
+Here is the image you’ll be recreating for reference.
+final
+
+Please, try to follow the specifications below and construct almost the same image.
+
+Note: id namings are important for testing reasons.
+
+Visual Specifications
+
+Profile photo:
+75px by 75px circle;
+Image URL:
+https://codesignal.s3.amazonaws.com/uploads/1603306788680/dog.jpeg.
+Card:
+Should be element with id="card";
+width of 300px;
+height of 100px;
+border that is a 1px thick solid gray line (#808080);
+spacing of 10px between the border and all inner content.
+Typography:
+All text should use Helvetica font.
+Spacing:
+Space between profile photo and name is 15px.
+Space between name and edit button is 5px.
+Name:
+Text size of 17px;
+Should be element with id="name";
+Content: Oscar Wilde.
+Status:
+Text size of 16px;
+Font color of #888888;
+Should be element with id="status";
+Content: online.
+Edit Button:
+Text content: Edit;
+Should be element with id=edit;
+Background color of #f1f8fb; font color of #2b6dad;
+Border that is 1px thick solid line with a color of #bbcadc;
+Border corners rounded by 4px.
+[execution time limit] 60 seconds
+Saved
+1
+CONSOLE
+TESTS
+Live Preview
+
+Manage Libraries
+Libraries are automatically added to the head.
+JS
+CSS
+Search
+e.g., react
+Installed Libraries
+MORE

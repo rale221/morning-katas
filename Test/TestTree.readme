@@ -1,0 +1,7 @@
+Implement a list of books using React. 
+Do not modify any of the existing HTML and CSS code - write your code only in JSX tab.
+
+Each book has a Delete button that should remove the element from the list, 
+and also there is an Add Book button that should insert a new book at the end of the list.
+
+The template already contains code that renders books, your task is to implement the functionality for Delete and Add Book buttons.
