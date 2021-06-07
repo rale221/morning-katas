@@ -7,3 +7,11 @@
 
 // "the-stealth-warrior" gets converted to "theStealthWarrior"
 // "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+
+function toCamelCase(str){
+     let regExp=/[-_]\w/ig;
+     return str.replace(regExp,function(match){
+           return match.charAt(1).toUpperCase();
+      });
+}
