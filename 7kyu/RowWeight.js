@@ -30,6 +30,8 @@
 
 array =[10,20,30,40,50,60]
 
+//Solution 1
+
 function rowWeights(array){
 
      let groupOne = array.filter((e, i) => i % 2 == 0 ).reduce((a, b)=> a+b, 0)
@@ -38,3 +40,15 @@ function rowWeights(array){
      return [groupOne, groupTwo]
 
 }
+
+// Solution 2
+
+function rowWeights(array){
+     var arr = [0, 0];
+     for (var i = 0; i < array.length; i++) {
+       i % 2 == 0 ? arr[0] += array[i] : arr[1] += array[i];
+     }
+     return arr;
+   }
+
+   
