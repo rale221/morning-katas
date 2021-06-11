@@ -29,6 +29,8 @@
 // The format of the strings will always be Europe and JavaScript.
 // All data will always be valid and uniform as in the example above.
 
+// Solution 1
+
 
 function countDevelopers(list) {
      let cont =list.map((e) => e.continent == 'Europe' && e.language == 'JavaScript')
@@ -42,3 +44,12 @@ function countDevelopers(list) {
      return res.length
 
 }
+
+// Solution 2
+
+function countDevelopers(list) {
+     return list
+       .filter(dev => dev.language === "JavaScript")
+       .filter(dev => dev.continent === "Europe")
+       .length
+   }
