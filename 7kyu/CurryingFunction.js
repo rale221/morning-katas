@@ -18,3 +18,10 @@ function multiplyAll(list){
          return a
 
 }}
+
+
+// Solution 1 & 2
+
+// multiplyAll = a => x => a.map(e => e * x);
+
+// const multiplyAll = arr => n => arr.map(x => n * x);
