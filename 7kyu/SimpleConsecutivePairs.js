@@ -10,9 +10,12 @@
 // --the fourth pair is (7,6), also consecutive. Count = 3. 
 // --the last digit has no pair, so we ignore.
 
-ar = [1,2,5,8,-4,-3,7,6,5]
+arr = [1,2,5,8,-4,-3,7,6,5]
 
-function pairs(ar){
-   
-     return ar
-}
+function pairs(arr){
+     let count=0;
+     for (i=0; i<arr.length; i+=2)
+       if (arr[i]-1==arr[i+1]||arr[i]+1==arr[i+1])
+         count++;
+     return count;
+   };
