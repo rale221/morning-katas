@@ -12,10 +12,24 @@
 
 arr = [1,2,5,8,-4,-3,7,6,5]
 
-function pairs(arr){
-     let count=0;
-     for (i=0; i<arr.length; i+=2)
-       if (arr[i]-1==arr[i+1]||arr[i]+1==arr[i+1])
-         count++;
-     return count;
-   };
+// Solution 1
+
+// function pairs(arr){
+//      let count=0;
+//      for (i=0; i<arr.length; i+=2)
+//        if (arr[i]-1==arr[i+1]||arr[i]+1==arr[i+1])
+//          count++;
+//      return count;
+//    };
+
+   // Solution 2
+
+   function pairs(arr){
+        let count = 0
+        for (i=0; i< arr.length; i+=2){
+             if (Math.abs(arr[i] - arr[i+1]) ==1){
+                  count += 1
+             }
+        }
+        return count
+   }
