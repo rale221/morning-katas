@@ -18,3 +18,16 @@ function breakChocolate(n,m){
      let res = n*m - 1
      return res
 }
+
+
+// Solution 2
+var breakChocolate = function(n, m) {
+     if(n === 0 || m === 0) return 0
+     return n*m - 1;
+    };
+
+// Solution 3
+var breakChocolate = function(n, m) {
+     return (n*m === 0) ? 0 : n * m - 1;
+    };
+
