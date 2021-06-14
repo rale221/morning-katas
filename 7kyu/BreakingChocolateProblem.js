@@ -6,6 +6,15 @@
 // If input data is invalid you should return 0 (as in no breaks are needed if we do not have any chocolate to split). 
 //Input will always be a non-negative integer.
 
+n = 5
+m = 5
 function breakChocolate(n,m){
-     
+     if (n <= 0 || m <= 0){
+          return 0
+     } else {
+          if (n == 1 && m == 1){
+               return 0
+          }}
+     let res = n*m - 1
+     return res
 }
