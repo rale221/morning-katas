@@ -22,3 +22,10 @@
 // whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 52) == "Penny"
 // whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951) == "Leonard"
 
+names = ["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"]
+r = 3
+
+function whoIsNext(names, r){
+     let w = names.map((e) => names.push(e))
+     return w
+}
