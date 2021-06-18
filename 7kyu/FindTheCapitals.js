@@ -7,6 +7,10 @@
 
 // Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
 
+word = 'CodEWaRs'
 function capitals(word){
-     
+
+     let array = word.split('')
+     return array
+
 }
