@@ -36,3 +36,12 @@ function gps(s, x){
         return Math.max(...output);
      
 }
+
+// Slution 2 slice, reduce
+
+function gps(x, x){
+
+let output =Math.floor(3600 * x.slice(1).reduce((m, d, i) => Math.max(m, d - x[i]), 0) / s);
+return output
+}
+
