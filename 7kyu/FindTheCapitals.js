@@ -10,7 +10,15 @@
 word = 'CodEWaRs'
 function capitals(word){
 
-     let array = word.split('')
-     return array
+     let array = word.split('')//.filter((e) => e.toLowerCase() !== e )
+     let index = []
+     for (i=0; i < array.length; i++){
+          if ( array[i].toLowerCase()!== array[i]){
+               index.push(array.indexOf(array[i]))
+          }
+     }
+     
+              
+     return index
 
 }
