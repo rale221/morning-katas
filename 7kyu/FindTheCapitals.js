@@ -7,18 +7,31 @@
 
 // Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
 
-word = 'CodEWaRs'
-function capitals(word){
+// Solution 1
 
-     let array = word.split('')//.filter((e) => e.toLowerCase() !== e )
-     let index = []
-     for (i=0; i < array.length; i++){
-          if ( array[i].toLowerCase()!== array[i]){
-               index.push(array.indexOf(array[i]))
-          }
-     }
+// word = 'CodEWaRs'
+// function capitals(word){
+
+//      let array = word.split('')//.filter((e) => e.toLowerCase() !== e )
+//      let index = []
+//      for (i=0; i < array.length; i++){
+//           if ( array[i].toLowerCase()!== array[i]){
+//                index.push(array.indexOf(array[i]))
+//           }
+//      }
      
               
-     return index
+//      return index
 
-}
+// }
+
+
+//Solution 2
+
+function capitals(word){
+     let index = [];
+     for(var i = 0; i < word.length; i++) {
+       if(word[i].toUpperCase() == word[i]) index.push(i);
+     }
+     return index;
+   }
