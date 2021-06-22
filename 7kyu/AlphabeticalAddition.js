@@ -17,3 +17,25 @@
 // addLetters('z', 'a') = 'a'
 // addLetters('y', 'c', 'b') = 'd' // notice the letters overflowing
 // addLetters() = 'z'
+
+
+// Solution 1
+
+function addLetters(...letters) {
+     return String.fromCharCode((letters.reduce( (a,b) => a+b.charCodeAt(0)-96, 0)+25)%26+97);
+ }
+
+ // Solution 2
+function addLetters(...letters) {
+  var sum = 25;
+  for (var letter of letters)
+    sum += alphabet.indexOf(letter) + 1;
+  return alphabet[sum % 26];  
+}
+
+// Solution 3
+function addLetters(...letters) {
+     const alpha = 'zabcdefghijklmnopqrstuvwxy';
+     const sum = letters.reduce((sum, letter) => sum + alpha.indexOf(letter), 0) % 26;
+     return alpha[sum];
+   }
