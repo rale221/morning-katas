@@ -23,6 +23,15 @@
 // parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 9291414, 9291270, 2581057, 2580168, 2579358, 0]
 
 ls = [1, 2, 3, 4, 5, 6]
-function partsSum(ls){
 
+function partsSum(ls){
+    let sum = []
+
+     for (i=0; i <= ls.length; i++){
+          s = ls.reduce((a, b) => a+b)
+          sum.push(s)
+
+     }
+
+     return sum
 }
