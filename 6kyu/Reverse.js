@@ -10,6 +10,12 @@
 // spinWords("This is a test") => "This is a test" 
 // spinWords("This is another test") => "This is rehtona test"
 
+string = "Hey fellow warriors"
+
 function spinWords(string){
-     //TODO Have fun :)
-   }
+     
+     const arrayOfWords = string.split(' ')
+     console.log(arrayOfWords)
+     const reveresedWords = arrayOfWords.map((e) => e.split('').reverse().toString())
+
+}
