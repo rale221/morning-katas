@@ -10,12 +10,20 @@
 // spinWords("This is a test") => "This is a test" 
 // spinWords("This is another test") => "This is rehtona test"
 
-string = "Hey fellow warriors"
+ // string = "This is a test"
+ string = "Welcome"
 
 function spinWords(string){
-     
      const arrayOfWords = string.split(' ')
      console.log(arrayOfWords)
-     const reveresedWords = arrayOfWords.map((e) => e.split('').reverse().toString())
+     if (arrayOfWords.length > 1) {
+     const reveresedWords = arrayOfWords.map((e) =>{
+          if (e.length > 5){
+          e.split('').reverse().join('')
+     }})} else {
+          const reveresedWords = string.split(' ')
+     }
 
+     return reveresedWords 
+    
 }
