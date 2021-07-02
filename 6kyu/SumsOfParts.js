@@ -25,14 +25,8 @@
 ls = [1, 2, 3, 4, 5, 6]
 
 function partsSum(ls){
-    let sum = []
-
-     for (i=0; i <= ls.length; i++){
-          s = ls.reduce((a, b) => a+b)  
-          console.log(s)  
-          sum.push(s)  // This sum full array only once 
-
-     }
-
-     return sum
+  ls.unshift(0)
+  let sum = ls.reduce((a, b) => a+b, 0)
+  let totalSum = ls.map(e => sum = sum - e)
+  return totalSum
 }
