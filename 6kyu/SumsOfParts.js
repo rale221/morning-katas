@@ -28,8 +28,9 @@ function partsSum(ls){
     let sum = []
 
      for (i=0; i <= ls.length; i++){
-          s = ls.reduce((a, b) => a+b)
-          sum.push(s)
+          s = ls.reduce((a, b) => a+b)  
+          console.log(s)  
+          sum.push(s)  // This sum full array only once 
 
      }
 
