@@ -24,9 +24,27 @@
 
 ls = [1, 2, 3, 4, 5, 6]
 
+
+//Solution 1
+
+
+// function partsSum(ls){
+//   ls.unshift(0)
+//   let sum = ls.reduce((a, b) => a+b, 0)
+//   let totalSum = ls.map(e => sum = sum - e)
+//   return totalSum
+// }
+
+
+// Solution 2
+
 function partsSum(ls){
-  ls.unshift(0)
-  let sum = ls.reduce((a, b) => a+b, 0)
-  let totalSum = ls.map(e => sum = sum - e)
-  return totalSum
+     let sum = []
+     sum.push(ls.reduce((a, b) => a+b, 0))
+     for (i=0; i< ls.length; i++){
+          sum.push((sum[sum.length -1]) - ls[i])
+     }
+
+     return sum
+
 }
