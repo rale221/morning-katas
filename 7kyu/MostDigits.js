@@ -3,9 +3,16 @@
 // Find the number with the most digits.
 // If two numbers in the argument array have the same number of digits, return the first one in the array.
 
-array = [1, 10, 7, 16, 15, 28, 20]
+array = [1, 10, 44447, 1446, 1533, 2448, 24440]
+// array = [31122, 71240]
 
 function findLongest(array){
+if (array.length == 2 && array[0].length == array[1].length){
+     return array[0]
+}
+const num = array.sort((a, b) => b - a)
+return num[0]
+
 
 }
 
