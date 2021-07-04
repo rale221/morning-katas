@@ -23,3 +23,15 @@ function uniqueInOrder(iterable){
      }
      return res
 }
+
+
+// Solution 2 and 3
+
+// var uniqueInOrder = function (iterable)
+// {
+//   return [].filter.call(iterable, (function (a, i) { return iterable[i - 1] !== a }));
+// }
+
+// var uniqueInOrder=function(iterable){
+//      return [...iterable].filter((a, i) => a !== iterable[i-1])
+//  }
