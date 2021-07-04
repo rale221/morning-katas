@@ -12,6 +12,14 @@
 iterable = 'AAAABBBCCDAABBB'
 
 function uniqueInOrder(iterable){
-     const array = iterable.split('').filter((e, i) => iterable.indexOf(e) === i)
-     console.log(array)
+     
+     let res = []
+     let last
+
+     for (i = 0; i< iterable.length; i++){
+          if (iterable[i] !== last) {
+               res.push(last = iterable[i])
+          }
+     }
+     return res
 }
