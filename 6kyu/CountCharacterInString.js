@@ -5,6 +5,8 @@
 
 string = 'aba'
 
+// Solution 1
+
 function count(string){
      let c = {}
      string.split('').forEach(e => {
@@ -13,3 +15,15 @@ function count(string){
      return c
 
 }
+
+
+
+//Solution 2
+
+function count (string) {  
+     var obj = {};
+     string = string.split('').forEach(function(x){
+       obj[x] = obj[x] ? obj[x] + 1 : 1;
+     });
+     return obj;
+   }
