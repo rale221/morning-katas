@@ -6,5 +6,10 @@
 string = 'aba'
 
 function count(string){
+     let c = {}
+     string.split('').forEach(e => {
+          c[e] ? c[e]++ : c[s] = 1
+     });
+     return c
 
 }
