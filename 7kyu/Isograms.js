@@ -7,6 +7,7 @@
 // isIsogram("moOse") == false // -- ignore letter case
 
 str = 'abajHSgabAA'
+// Solution 1 set method
 
 function isIsogram(str){
      const lowerCase = str.toLowerCase().split('')
@@ -17,3 +18,15 @@ function isIsogram(str){
           return true
      }
 }
+
+
+// Solution 2 4loop
+function isIsogram(str){
+     var i, j;
+     str = str.toLowerCase();
+     for(i = 0; i < str.length; ++i)
+       for(j = i + 1; j < str.length; ++j)
+         if(str[i] === str[j])
+           return false;
+     return true;
+   }
