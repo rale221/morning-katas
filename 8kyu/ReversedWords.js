@@ -8,5 +8,8 @@
 str = "The greatest victory is that which requires no battle"
 
 function reverseWords(str){
+     let arrayOfWords = str.split(' ').reverse().join(' ')
+     return arrayOfWords
+
 
 }
