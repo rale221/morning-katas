@@ -9,5 +9,11 @@
 str = 'abajHSgabAA'
 
 function isIsogram(str){
-     
+     const lowerCase = str.toLowerCase().split('')
+     const s = new Set(lowerCase)
+     if (lowerCase.length !== s.size){
+          return false
+     } else {
+          return true
+     }
 }
