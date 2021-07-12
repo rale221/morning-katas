@@ -7,6 +7,15 @@
 // divisors(25); // should return [5]
 // divisors(13); // should return "13 is prime"
 
+
+integer = 12
+
 function divisors(integer){
-     
+     let num = []
+     for (i=2; i<= Math.floor(integer / 2); i++){
+          if (integer % i == 0){
+               num.push(i)
+          }
+     }
+     return num.length ? num : integer + ' is prime'
 }
