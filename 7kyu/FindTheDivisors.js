@@ -19,3 +19,17 @@ function divisors(integer){
      }
      return num.length ? num : integer + ' is prime'
 }
+
+// SOLUTION 2
+
+function divisors(integer) {
+     var divs = [];
+     
+     for(var i = 2; i < integer; i++) {
+       if(integer % i === 0) {
+         divs.push(i);
+       }
+     }
+     
+     return divs.length ? divs : integer + ' is prime';
+   };
