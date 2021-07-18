@@ -37,3 +37,69 @@
 // For testing and debugging, escHTML and escWS have been predefined;
 // they escape HTML special characters ( & < > ) and whitespace ( tab, newline and space ) respectively for printing to the console.
 // When using both, apply escWS after escHTML, or your spaces will come out as &amp;space;.
+
+function indent(source) {
+	// console.log(escWS(escHTML(source)))
+	if (source === '') {
+		return '';
+	}
+	const tags = /<(\/)?[^>]+>/g; // (?!br\s*\/?)
+	let result = [];
+	let depth = 0;
+	let lastIndex = 0;
+	let isPreviousChunkTag = false;
+	while ((match = tags.exec(source))) {
+		tag = match[0];
+		if (!tag) {
+			return source;
+		}
+		const content = source
+			.substring(lastIndex, match.index)
+			.replace(/\n+/g, ' ')
+			.replace(/\s+/g, ' ')
+			.trim();
+		if (content.length > 0) {
+			result.push(' '.repeat(2 * depth) + content);
+			isPreviousChunkTag = false;
+		}
+		const isOpeningTag = tag[1] !== '/';
+		if (isOpeningTag) {
+			const isSelfClosing = tag[tag.length - 2] === '/';
+			const isBr = /^<br\s+\/?>$/.test(tag);
+			if (isBr && !isPreviousChunkTag) {
+				if (result.length - 1 < 0) {
+					result.push('');
+				}
+				result[result.length - 1] = result[result.length - 1] + tag;
+			} else {
+				result.push(' '.repeat(2 * depth) + tag);
+			}
+			if (!isSelfClosing) {
+				depth++;
+			}
+		} else {
+			depth--;
+			result.push(' '.repeat(2 * depth) + tag);
+		}
+		isPreviousChunkTag = true;
+		lastIndex = match.index + tag.length;
+	}
+	if (lastIndex < source.length) {
+		const content = source
+			.substring(lastIndex, source.length)
+			.replace(/\n+/g, ' ')
+			.replace(/\s+/g, ' ')
+			.trim();
+		if (content.length > 0) {
+			result.push(' '.repeat(2 * depth) + content);
+			isPreviousChunkTag = false;
+		}
+	}
+	if (result.length === 0) {
+		return (source + '\n').replace(/\n+/g, '\n');
+	}
+	let newResult = result.join('\n');
+	newResult = newResult.replace(/(?!\n)\n+/g, ' ') + '\n';
+	newResult = newResult.replace(/\n+/g, '\n');
+	return newResult;
+}
