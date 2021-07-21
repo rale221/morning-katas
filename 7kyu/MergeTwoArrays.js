@@ -16,5 +16,18 @@ a = [a, b, c, d, e]
 b = [1, 2, 3, 4, 5]
 
 function mergeArrays(a, b){
+     let res = []
+     let counter = 0
+
+     while (a[counter] || b[counter]){
+          if (a[counter]){
+               res.push(a[counter])
+          }
+          if (b[counter]){
+               res.push(b[counter])
+          }
+          counter ++
+     }
+     return res
 
 }
