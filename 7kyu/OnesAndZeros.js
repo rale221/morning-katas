@@ -18,5 +18,8 @@
 // However, the arrays can have varying lengths, not just limited to 4.
 
 function binaryArrayToNumber(arr){
-     
+
+     const res =  parseInt(arr.join(''), 2);
+     return res
+
 }
