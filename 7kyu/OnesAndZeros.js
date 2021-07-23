@@ -23,3 +23,8 @@ function binaryArrayToNumber(arr){
      return res
 
 }
+
+// Solution 2
+function binaryArrayToNumber(arr) {
+     return arr.reduce( (a, b) => a << 1 | b );
+   }
