@@ -6,8 +6,11 @@
 //   sumDigits(99);  // Returns 18
 //   sumDigits(-32); // Returns 5
 // Let's assume that all numbers in the input will be integer values.
-number = 212
+number = -32
 
 function sumDigits(number){
-
+     let arr = number.toString().split('').filter((a) => !isNaN(a)).map(Number)
+     console.log(arr)
+     const res = arr.reduce((a, b) => a+b)
+     return res
 }
