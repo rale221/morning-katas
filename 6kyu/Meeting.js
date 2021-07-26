@@ -23,4 +23,8 @@ s ="Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Ra
 
 function meeting(s){
 
+     const semiColon = s.toUpperCase().split(';').map((e) => e.split(':').reverse().join(', '))
+     .sort()
+     .join(')(')
+     return '(' + semiColon + ')'
 }
