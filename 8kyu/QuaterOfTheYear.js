@@ -19,3 +19,8 @@ function quaterOf(month){
           return 'Fourth Quater'
      }
 }
+
+
+// solution using math.cell
+
+const quarterOf = m => Math.ceil(m/3);
