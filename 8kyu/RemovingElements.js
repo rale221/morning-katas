@@ -17,3 +17,13 @@ function removeEveryOther(arr){
      return arr
 
 }
+
+// solution 2 using filter
+
+function removeEveryOther(arr){
+     return arr.filter(function(elem, index) {
+       return index % 2 === 0;
+     });
+   }
+
+   
