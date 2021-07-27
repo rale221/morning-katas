@@ -6,6 +6,16 @@
 // month 6 (June), is part of the second quarter; 
 // and month 11 (November), is part of the fourth quarter.
 
+month = 4
+
 function quaterOf(month){
-     
+     if ( month < 4){
+          return 'First Quater'
+     } if ( month > 3 && month < 7){
+          return 'Secon Quater'
+     } if ( month > 6 && month < 10){
+          return 'Tird Quater'
+     } else {
+          return 'Fourth Quater'
+     }
 }
