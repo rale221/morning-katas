@@ -7,6 +7,13 @@
 
 // Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
+flower1 = 3
+flower2 = 4
+
 function lovefunc(flower1, flower2){
-     // moment of truth
-   }
+  if (flower1 % 2 !== flower2 % 2) {
+    return true
+  } else {
+    return false
+  }
+}
