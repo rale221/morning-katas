@@ -7,3 +7,13 @@
 // so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
 
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+
+
+function isValidWalk(walk) {
+     const north = walk.filter(item => { return item === "n" }).length;
+     const south = walk.filter(item => { return item === "s" }).length;
+     const east = walk.filter(item => { return item === "e" }).length;
+     const west = walk.filter(item => { return item === "w" }).length;
+     
+     return walk.length === 10 && north === south && east === west;
+   }
