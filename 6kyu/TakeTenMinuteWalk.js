@@ -17,3 +17,10 @@ function isValidWalk(walk) {
      
      return walk.length === 10 && north === south && east === west;
    }
+
+
+   // solution 2
+
+   function isValidWalk(walk) {
+     return walk.length == 10 && !walk.reduce(function(w,step){ return w + {"n":-1,"s":1,"e":99,"w":-99}[step]},0)
+   }
