@@ -6,5 +6,4 @@
 b = true
 function booleanToString(b){
      return b.toString()
-
 }
