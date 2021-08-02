@@ -10,3 +10,9 @@ function greet(name){
      return "Hello, " + name + " how are you doing today?"
 
 }
+
+// Solution 2
+
+function greet(name){
+     return `Hello, ${name} how are you doing today?`;
+   }
