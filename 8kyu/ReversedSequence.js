@@ -4,6 +4,11 @@
 
 // Example : n=5 --> [5,4,3,2,1]
 
+
+// Solution 1
+
+
 function reverseSeq(n){
 
+     
 }
