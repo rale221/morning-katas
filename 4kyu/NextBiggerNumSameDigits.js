@@ -77,19 +77,19 @@ function getIndex(arr) {
      return leftMostIndexOfNumsToChange;
    }
    
-   function getClosestGreaterNum(numToCompareTo, arr) {
-     let greaterNum = 10;
-     let indexOfClosestGreaterNum = -1;
+  //  function getClosestGreaterNum(numToCompareTo, arr) {
+  //    let greaterNum = 10;
+  //    let indexOfClosestGreaterNum = -1;
      
-     arr.forEach((digit, i) => {
-       if (digit > numToCompareTo && digit < greaterNum) {
-         greaterNum = digit;
-         indexOfClosestGreaterNum = i;
-       };
-     });
+  //    arr.forEach((digit, i) => {
+  //      if (digit > numToCompareTo && digit < greaterNum) {
+  //        greaterNum = digit;
+  //        indexOfClosestGreaterNum = i;
+  //      };
+  //    });
      
-     return indexOfClosestGreaterNum;
-   }
+  //    return indexOfClosestGreaterNum;
+  //  }
    
    function nextBigger(n){
      // make number an array of single digits
