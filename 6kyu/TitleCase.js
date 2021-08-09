@@ -19,6 +19,8 @@
 // titleCase('the quick brown fox') // should return: 'The Quick Brown Fox'
 
 
+// Solution 1
+
 function titleCase(title, minorWords) {
      var minorWords = typeof minorWords !== "undefined" ? minorWords.toLowerCase().split(' ') : [];
      return title.toLowerCase().split(' ').map(function(v, i) {
@@ -29,4 +31,27 @@ function titleCase(title, minorWords) {
        }
        return v;
      }).join(' ');
+   }
+
+
+   // Solution 2
+
+   const titleCase = (title, minorWords) => {
+
+     if (!title) 
+       return title;
+   
+     let cap = word => 
+       word[0].toUpperCase() + word.slice(1);
+   
+     let minors = (minorWords || '')
+       .toLowerCase()
+       .split(' ');
+   
+     let result = title
+       .toLowerCase()
+       .replace(/\S+/g, w => minors.indexOf(w) === -1 ? cap(w) : w);
+   
+     return cap(result);
+   
    }
