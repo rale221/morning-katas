@@ -7,8 +7,16 @@
 
 // Solution 1
 
+n = 5
 
 function reverseSeq(n){
+
+     let arr = []
+     for (i=n; i>0; i--){
+          arr.push(i)
+     }
+     return arr
+
 
      
 }
