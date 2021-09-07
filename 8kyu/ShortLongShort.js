@@ -9,7 +9,13 @@
 
 // ("1", "22") --> "1221"
 // ("22", "1") --> "1221"
-
+a = '45'
+b = '1'
 function solution(a, b){
+     if (a.length < b.length){
+          return a + b + a
+     } else {
+          return b + a + b
+     }
      
    }
