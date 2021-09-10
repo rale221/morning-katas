@@ -10,6 +10,11 @@ Return true if the array contains the value, false if not.
 
 */
 
+
+a = [1,2,3,4,5,6]
+
+x = 4
+
 function check(a, x) {
-     // your code here
+     return a.includes(x)
    }
