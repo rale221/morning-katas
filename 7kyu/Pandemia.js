@@ -36,5 +36,15 @@
 s = "01000000X000X011X0X"
 
 function infected(s) {
-     return 0;
-   }
+
+     let arr = s.split('X')
+     let allPeople = 0
+     let infPeople = 0
+     for (i = 0; i<arr.length; i++){
+          allPeople += arr[i].length
+          if (arr[i].includes('1')){
+               infPeople += arr[i].length
+          }
+     }
+     return infPeople / allPeople * 100
+}
