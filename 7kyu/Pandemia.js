@@ -36,7 +36,7 @@
 s = "01000000X000X011X0X"
 
 function infected(s) {
-
+     if(!(s.includes('0') && s.includes('1'))) return 0;
      let arr = s.split('X')
      let allPeople = 0
      let infPeople = 0
