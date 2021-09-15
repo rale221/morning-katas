@@ -21,6 +21,9 @@
 
 letters = "abc"
 coords = [1,1]
+
+// solution 1
+
 function lastSurvivor(letters, coords) {
      letters = letters.split('')
      for (i=0; i<coords.length; i++){
@@ -29,3 +32,14 @@ function lastSurvivor(letters, coords) {
      return letters.join('')
      
 }
+
+// solution 2
+
+function lastSurvivor(letters, coords) {
+     let result = letters.split('');
+     for (let i of coords) {
+         result.splice(i, 1);
+     }
+     
+     return result.join('');
+   }
