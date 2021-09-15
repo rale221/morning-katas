@@ -19,7 +19,13 @@
 // All numbers are valid.
 // There can be duplicate letters and numbers.
 
-
+letters = "abc"
+coords = [1,1]
 function lastSurvivor(letters, coords) {
-
+     letters = letters.split('')
+     for (i=0; i<coords.length; i++){
+          letters.splice(coords[i], 1)
+     }
+     return letters.join('')
+     
 }
