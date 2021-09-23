@@ -16,6 +16,4 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
      } else {
           return (sonYearsOld *2) - dadYearsOld
      }
-     
-
    }
