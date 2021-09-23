@@ -4,6 +4,15 @@
 
 // For example (Input --> Output)
 
+s = "yes"
 function ensureQuestion(s) {
-     // Code here
+     
+ let stringLenght = s.length
+ console.log(stringLenght)
+if (s.charAt(stringLenght -1) === '?'){
+     return s
+} else {
+     return s + '?'
+}
+
    }
